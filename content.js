@@ -67,7 +67,7 @@ window.birthdayConfig = {
   ],
   memories: [
     {
-      src: "assets/photos/memory-1.jpg",
+      src: "memory-1.jpg",
       alt: "Birthday memory one",
       title: "Golden memory",
       caption: "Drop in one of her best photos here for an instant glow-up."
@@ -77,7 +77,7 @@ window.birthdayConfig = {
   ],
   passedPet: {
     name: "Your little star",
-    photo: "assets/photos/passed-pet.jpg",
+    photo: "passed-pet.jpg",
     memory:
       "Some loves stay close forever, even after they become invisible. This small corner is here as a gentle reminder that being loved that deeply never really fades.",
     quote: "Loved then, loved now, loved always."
@@ -85,12 +85,12 @@ window.birthdayConfig = {
   pets: [
     {
       name: "ONYX",
-      photo: "assets/photos/pet-1.jpg",
+      photo: "pet-1.jpg",
       note: "Add the real name and a tiny funny description here."
     },
     {
       name: "BUG",
-      photo: "assets/photos/pet-2.jpg",
+      photo: "pet-2.jpg",
       note: "This card is ready for the second pet's photo and personality."
     }
   ],
