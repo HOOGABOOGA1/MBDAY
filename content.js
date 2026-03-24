@@ -6,7 +6,7 @@ window.birthdayConfig = {
   dedication:
     "You make the ordinary feel softer, brighter, and a little more magical just by being in it.",
   music: {
-    file: "HAPPY BIRTHDAY.mp3",
+    file: "happy-bday.mp3",
     label: "Custom birthday track"
   },
   game: {
