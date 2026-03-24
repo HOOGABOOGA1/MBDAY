@@ -91,7 +91,7 @@ window.birthdayConfig = {
     {
       name: "BUG",
       photo: "pet-2.jpg",
-      note: "THIS DUDE IS SOMETHING HAHA."
+      note: "THIS DUDE IS SO funny looking to me HAHA."
     }
   ],
   surpriseMessages: [
