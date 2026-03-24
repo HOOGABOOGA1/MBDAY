@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Melek's Birthday Universe</title>
+  <meta
+    name="description"
+    content="A magical birthday website with animated surprises, photo slots, a soft pet tribute, and a mini-game."
+  >
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="background-glow glow-one" aria-hidden="true"></div>
+  <div class="background-glow glow-two" aria-hidden="true"></div>
+  <div class="background-glow glow-three" aria-hidden="true"></div>
+  <div class="starfield" id="starfield" aria-hidden="true"></div>
+  <div class="effect-layer" id="effectLayer" aria-hidden="true"></div>
+  <div class="toast-stack" id="toastStack" aria-live="polite"></div>
+
+  <div class="start-screen" id="startScreen">
+    <div class="start-card">
+      <p class="eyebrow">Birthday Constellation</p>
+      <h1 id="startTitle">For Melek / Kaeysi</h1>
+      <p id="startMessage">
+        A sky full of light, memories, soft wishes, and one tiny game is waiting for you.
+      </p>
+      <div class="start-actions">
+        <button class="primary-button" id="startExperience">Open the Birthday Sky</button>
+        <button class="secondary-button" id="peekButton">Send a Little Sparkle</button>
+      </div>
+      <p class="helper-copy">
+        Music begins when you press the button because browsers block autoplay until someone clicks.
+      </p>
+    </div>
+  </div>
+
+  <header class="topbar">
+    <div class="topbar-copy">
+      <p class="eyebrow">A two-minute magical surprise</p>
+      <h1 id="heroTitle">For Melek / Kaeysi</h1>
+    </div>
+
+    <div class="topbar-controls">
+      <button class="secondary-button" id="musicToggle" aria-pressed="false">Music: waiting</button>
+      <button class="secondary-button" id="burstButton">More Magic</button>
+    </div>
+
+    <div class="progress-shell">
+      <div class="progress-head">
+        <span>Birthday timeline</span>
+        <span id="progressLabel">02:00</span>
+      </div>
+      <div class="progress-bar" aria-hidden="true">
+        <span id="progressFill"></span>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="panel hero-panel reveal visible">
+      <div class="hero-copy">
+        <p class="eyebrow">Made with tenderness, stardust, and a little chaos</p>
+        <h2 id="heroLine">A birthday universe made just for you.</h2>
+        <p class="hero-text" id="heroIntro">
+          Every click wakes up a different effect, the page unfolds for two full minutes, and there is a tiny
+          game waiting further below.
+        </p>
+
+        <div class="hero-actions">
+          <button class="primary-button" id="wishButton">Release a Wish</button>
+          <button class="secondary-button" id="quoteButton">Show Another Quote</button>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="orbital-card">
+          <div class="orbital-ring orbital-ring-one"></div>
+          <div class="orbital-ring orbital-ring-two"></div>
+          <div class="orbital-core">
+            <span class="core-badge">02:00 experience</span>
+            <strong id="coreName">Melek / Kaeysi</strong>
+            <span id="musicStatus">Music mode: waiting</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel story-panel reveal">
+      <div class="section-head">
+        <p class="eyebrow">The magic rail</p>
+        <h2>The page keeps unlocking little moments</h2>
+        <p>
+          The first two minutes are choreographed like a tiny show: new colors, new bursts, gentle messages,
+          and a finale.
+        </p>
+      </div>
+      <div class="chapter-track" id="chapterTrack"></div>
+    </section>
+
+    <section class="panel gallery-panel reveal">
+      <div class="section-head">
+        <p class="eyebrow">Photo spellbook</p>
+        <h2>Your memories can live here</h2>
+        <p>
+          Drop her pictures into the photo folder and this gallery will light up automatically.
+        </p>
+      </div>
+      <div class="photo-grid" id="photoGallery"></div>
+    </section>
+
+    <section class="panel tribute-panel reveal">
+      <div class="section-head">
+        <p class="eyebrow">A soft little remembrance</p>
+        <h2>For the pet who is still loved every day</h2>
+        <p>
+          This section is made gently, so it feels like a tribute instead of something heavy.
+        </p>
+      </div>
+
+      <div class="tribute-layout">
+        <div class="tribute-photo-shell" id="tributePhotoShell"></div>
+
+        <div class="tribute-copy">
+          <p class="tribute-name" id="tributeName"></p>
+          <p class="tribute-memory" id="tributeMemory"></p>
+          <blockquote class="tribute-quote" id="tributeQuote"></blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel pets-panel reveal">
+      <div class="section-head">
+        <p class="eyebrow">Her other adorable companions</p>
+        <h2>The other two pets can join the celebration too</h2>
+        <p>
+          You can replace the names, notes, and photos anytime in the config file.
+        </p>
+      </div>
+      <div class="pet-grid" id="petGallery"></div>
+    </section>
+
+    <section class="panel quotes-panel reveal">
+      <div class="section-head">
+        <p class="eyebrow">Moonlit words</p>
+        <h2>Quotes to make the page feel more personal</h2>
+        <p>
+          These rotate on demand and also appear during the two-minute sequence.
+        </p>
+      </div>
+      <div class="quote-stack" id="quoteStack"></div>
+    </section>
+
+    <section class="panel game-panel reveal">
+      <div class="section-head">
+        <p class="eyebrow">Mini game</p>
+        <h2>Catch the birthday stars</h2>
+        <p>
+          Click the falling stars and hearts before time runs out. Win, and the page unlocks an extra note.
+        </p>
+      </div>
+
+      <div class="game-controls">
+        <button class="primary-button" id="gameStartButton">Start the Game</button>
+        <div class="game-stat">
+          <span>Score</span>
+          <strong id="gameScore">0</strong>
+        </div>
+        <div class="game-stat">
+          <span>Time</span>
+          <strong id="gameTimer">30s</strong>
+        </div>
+        <div class="game-stat">
+          <span>Goal</span>
+          <strong id="gameGoal">12</strong>
+        </div>
+      </div>
+
+      <div class="game-board" id="gameBoard">
+        <p class="game-overlay" id="gameOverlay">Press start and catch the sparkle before it falls away.</p>
+      </div>
+      <p class="game-result" id="gameResult"></p>
+    </section>
+
+    <section class="panel finale-panel reveal">
+      <div class="section-head">
+        <p class="eyebrow">The last note</p>
+        <h2>A final little birthday wish</h2>
+      </div>
+      <p class="finale-note" id="finaleNote"></p>
+
+      <div class="hero-actions">
+        <button class="primary-button" id="finaleButton">Big Finale</button>
+        <button class="secondary-button" id="letterButton">Another Love Note</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-note">
+    Edit <code>content.js</code> to change names, quotes, pet notes, image filenames, and the custom music path.
+  </footer>
+
+  <script src="content.js" defer></script>
+  <script src="app.js" defer></script>
+</body>
+</html>
