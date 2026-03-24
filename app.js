@@ -659,7 +659,7 @@ function endGame(won) {
     : "The sky wants a rematch. Try again for the secret note.";
 
   if (won) {
-    ui.gameResult.textContent = "Secret unlocked: Even on hard days, you still make the world softer just by being here.";
+    ui.gameResult.textContent = "Secret unlocked: Even on hard days, you still make the world softer just by being here.ILY!";
     spawnCenterCelebration(18);
     showToast("Game won. Secret note unlocked.");
   } else {
