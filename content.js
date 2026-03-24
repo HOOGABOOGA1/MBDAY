@@ -7,7 +7,7 @@ window.birthdayConfig = {
     "You make the ordinary feel softer, brighter, and a little more magical just by being in it.",
   music: {
     file: "happy-bday.mp3",
-    label: "Custom birthday track"
+    label: "HAPPY BIRTHDAY- BY Drake"
   },
   game: {
     goal: 12,
