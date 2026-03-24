@@ -6,11 +6,11 @@ window.birthdayConfig = {
   dedication:
     "You make the ordinary feel softer, brighter, and a little more magical just by being in it.",
   music: {
-    file: "happy-bday.mp3",
+    file: "happy-bday.mp3" ,
     label: "HAPPY BIRTHDAY- BY Drake"
   },
   game: {
-    goal: 12,
+    goal: 10,
     duration: 30
   },
   quotes: [
@@ -70,7 +70,7 @@ window.birthdayConfig = {
       src: "memory-1.jpg",
       alt: "Birthday memory one",
       title: "Golden memory",
-      caption: "Drop in one of her best photos here for an instant glow-up."
+      caption: "YOUR EYES ARE VERY BEAUTIFUL MELEK"
     },
 
 
@@ -86,12 +86,12 @@ window.birthdayConfig = {
     {
       name: "ONYX",
       photo: "pet-1.jpg",
-      note: "Add the real name and a tiny funny description here."
+      note: "BRO IS ALWAYS SO ANGRY, I LOVE HIM."
     },
     {
       name: "BUG",
       photo: "pet-2.jpg",
-      note: "This card is ready for the second pet's photo and personality."
+      note: "THIS DUDE IS SOMETHING HAHA."
     }
   ],
   surpriseMessages: [
